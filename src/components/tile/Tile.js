@@ -5,10 +5,10 @@ export const Tile = ({name, description}) => {
   return (
     <div className="tile-container">
       <p className="tile-tittle">{name}</p>
-      {Object.keys(description).forEach(key=>{
+      {Object.keys(description).map(key=>{
         return (
-          <p className="tile">
-            description[key]
+          <p className="tile" key={description.id}>
+            {description[key]}
           </p>
         )
       })}
